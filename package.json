@@ -1,5 +1,6 @@
 {
   "name": "express-hbs",
+  "private": true,
   "version": "0.5.2-pre",
   "description": "Express 3 handlebars template engine complete with multiple layouts, partials and blocks.",
   "keywords": [
@@ -18,9 +19,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/barc/express-hbs"
+    "url": "https://github.com/digitalcuisine/express-hbs"
   },
-  "bugs": "https://github.com/barc/express-hbs/issues",
+  "bugs": "https://github.com/digitalcuisine/express-hbs/issues",
   "author": "Mario Gutierrez <mario@barc.com>",
   "license": "MIT",
   "devDependencies": {
