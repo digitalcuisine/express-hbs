@@ -15,7 +15,7 @@ function create(hbs, env) {
 
 // Hook in express-hbs and tell it where known directories reside
   app.engine('hbs', hbs.express3({
-    partialsDir: __dirname + '/views/partials',
+    partialsDir: [__dirname + '/views/partials', __dirname + '/views/partials-other'],
     defaultLayout: __dirname + '/views/layout/default.hbs'
   }));
   app.set('view engine', 'hbs');
@@ -68,9 +68,9 @@ function create(hbs, env) {
   });
 
   app.get('/fruits/:name', function(req, res) {
-      res.render('fruits/details', {
-        fruit: req.params.name
-      })
+    res.render('fruits/details', {
+      fruit: req.params.name
+    })
   });
 
   app.get('/veggies', function(req, res) {
@@ -83,14 +83,14 @@ function create(hbs, env) {
 
   app.get('/veggies/:name', function(req, res) {
     res.render('veggies/details', {
-        veggie: req.params.name,
-        layout: '../layout/veggie-details'
+      veggie: req.params.name,
+      layout: '../layout/veggie-details'
     })
   });
 
-
   return app;
 }
+
 
 
 if (require.main === module) {
